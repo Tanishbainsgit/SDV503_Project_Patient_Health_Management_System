@@ -1,0 +1,43 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": { "type": "string" },
+      "firstName": { "type": "string" },
+      "lastName": { "type": "string" },
+      "email": { "type": "string" },
+      "password": { "type": "string" },
+      "phone": { "type": "string" },
+      "dateOfBirth": { "type": "string", "format": "date" },
+      "gender": { "type": "string" },
+      "photo": { "type": "string" },
+      "medicalHistory": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "condition": { "type": "string" },
+            "diagnosisDate": { "type": "string", "format": "date" },
+            "treatment": { "type": "string" }
+          },
+          "required": ["condition", "diagnosisDate", "treatment"]
+        }
+      },
+      "appointments": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "appointmentId": { "type": "string" },
+            "date": { "type": "string", "format": "date" },
+            "doctor": { "type": "string" },
+            "reason": { "type": "string" }
+          },
+          "required": ["appointmentId", "date", "doctor", "reason"]
+        }
+      }
+    },
+    "required": ["id", "firstName", "lastName", "email", "password", "phone", "dateOfBirth", "gender", "photo", "medicalHistory", "appointments"]
+  }
+}

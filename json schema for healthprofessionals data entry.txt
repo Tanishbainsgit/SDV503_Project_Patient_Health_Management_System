@@ -1,0 +1,16 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": { "type": "string" },
+      "firstName": { "type": "string" },
+      "lastName": { "type": "string" },
+      "email": { "type": "string" },
+      "password": { "type": "string" },
+      "phone": { "type": "string" },
+      "specialization": { "type": "string" }
+    },
+    "required": ["id", "firstName", "lastName", "email", "password", "phone", "specialization"]
+  }
+}
